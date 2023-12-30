@@ -1,4 +1,3 @@
-# You should modify initialize()
 def initialize():
     global cur_balance_owing_intst, cur_balance_owing_recent
     global last_update_day, last_update_month
@@ -25,9 +24,6 @@ def all_three_different(c1, c2, c3):
     return False
 
 
-#what about the case when 2 are
-#different but they are the first 2
-
 def is_fraud(most_recent_country):
     global last_country2, last_country 
     if all_three_different(most_recent_country, last_country, last_country2) and not (last_country2 == None or last_country == None or last_country == None):
@@ -37,7 +33,7 @@ def is_fraud(most_recent_country):
     last_country = most_recent_country
     return False
 
-#needs improvement
+
 def date_same_or_later(day1, month1, day2, month2):
     #if month1 >= month2 and day1 >= day2:
     #    return True    
@@ -59,7 +55,6 @@ def compute_interest_and_update_month(current_month, current_day):
     if cur_balance_owing_recent < 0:
         return
     
-    #hmmmmmmmmmm make sure to test this
     for i in range(last_update_month, current_month):
         cur_balance_owing_intst *= 1 + MONTHLY_INTEREST_RATE
         
