@@ -1,0 +1,1 @@
+This code defines a credit card management system with functions to handle purchases, bill payments, and interest computations. It incorporates fraud detection by analyzing the user's transaction history, and efficiently calculates monthly interest on outstanding balances.
